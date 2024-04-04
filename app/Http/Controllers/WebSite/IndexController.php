@@ -57,6 +57,16 @@ class IndexController extends Controller
      *
      * @return View
      */
+    public function ceo(Request $request): View
+    {
+        return view('website.pages.ceo');
+    }
+
+    /**
+     * @method GET
+     *
+     * @return View
+     */
     public function contact(Request $request): View
     {
         return view('website.pages.contact');
@@ -74,14 +84,14 @@ class IndexController extends Controller
      */
     public function scheduleMeeting(ScheduleMeetingRequest $request): JsonResponse
     {
-        Mail::to('lpgconsultoresintelisis@gmail.com')->send(
+        Mail::to('al221510887@gmail.com')->send(
             new ScheduleMeeting($request->validated())
         );
         // Mail::to($request->email)->send(
         //     new ScheduleMeeting($request->validated())
         // );
 
-        Mail::to('lpgconsultoresintelisis@gmail.com')->send(
+        Mail::to('al221510887@gmail.com')->send(
             new ScheduleMeetingForDoctor($request->validated())
         );
 

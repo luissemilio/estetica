@@ -60,7 +60,7 @@
 										<a href="{{ route('website.index') }}" @if( request()->routeIs('website.index')) class="active" @endif aria-label="Toggle navigation">Inicio</a>
 									</li>
 									<li class="nav-item">
-										<a href="nosotros.html" @if( request()->routeIs('website.about-us')) class="active" @endif aria-label="Toggle navigation">Acerca de
+										<a href="{{ route('website.about-us') }}" @if( request()->routeIs('website.about-us')) class="active" @endif aria-label="Toggle navigation">Acerca de
 											Nosotros</a>
 									</li>
 									<li class="nav-item">
@@ -74,8 +74,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="{{ route('website.inspirate') }}" @if( request()->routeIs('website.inspirate')) class="active" @endif aria-label="Toggle navigation">
-
+										<a href="{{ route('website.ceo') }}" @if( request()->routeIs('website.ceo')) class="active" @endif aria-label="Toggle navigation">
 											ceo </a>
 									</li>
 									<li class="nav-item">
@@ -164,8 +163,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('website.inspirate') }}" @if( request()->routeIs('website.inspirate')) class="active" @endif aria-label="Toggle navigation">
-
+                                            <a href="{{ route('website.ceo') }}" @if( request()->routeIs('website.ceo')) class="active" @endif aria-label="Toggle navigation">
                                                 ceo </a>
                                         </li>
                                         <li class="nav-item">
