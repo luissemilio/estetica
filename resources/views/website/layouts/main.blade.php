@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}" />
 	<link rel="stylesheet" href="{{ asset('assets/css/tiny-slider.css')}}" />
 	<link rel="stylesheet" href="{{ asset('assets/css/glightbox.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.css')}}" />
 	<link rel="stylesheet" href="{{ asset('assets/css/main.css')}}" />
     <link rel="stylesheet" href="{{ asset('assets/css/galeria.css')}}" />
 </head>
@@ -56,29 +57,29 @@
 							<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
 								<ul id="nav" class="navbar-nav ms-auto">
 									<li class="nav-item">
-										<a href="{{ route('website.index') }}" aria-label="Toggle navigation">Inicio</a>
+										<a href="{{ route('website.index') }}" @if( request()->routeIs('website.index')) class="active" @endif aria-label="Toggle navigation">Inicio</a>
 									</li>
 									<li class="nav-item">
-										<a href="nosotros.html" class="active" aria-label="Toggle navigation">Acerca de
+										<a href="nosotros.html" @if( request()->routeIs('website.about-us')) class="active" @endif aria-label="Toggle navigation">Acerca de
 											Nosotros</a>
 									</li>
 									<li class="nav-item">
-										<a href="{{ route('website.services') }}" aria-label="Toggle navigation">
+										<a href="{{ route('website.services') }}"  @if( request()->routeIs('website.services')) class="active" @endif aria-label="Toggle navigation">
 											Nuestros Servicios
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="{{ route('website.inspirate') }}" aria-label="Toggle navigation">
+										<a href="{{ route('website.inspirate') }}" @if( request()->routeIs('website.inspirate')) class="active" @endif aria-label="Toggle navigation">
 											Inspírate
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="{{ route('website.inspirate') }}" aria-label="Toggle navigation">
+										<a href="{{ route('website.inspirate') }}" @if( request()->routeIs('website.inspirate')) class="active" @endif aria-label="Toggle navigation">
 
 											ceo </a>
 									</li>
 									<li class="nav-item">
-										<a href="{{ route('website.contact') }}" aria-label="Toggle navigation">Contacto</a>
+										<a href="{{ route('website.contact') }}" @if( request()->routeIs('website.contact')) class="active" @endif aria-label="Toggle navigation">Contacto</a>
 									</li>
 								</ul>
 							</div>
@@ -146,29 +147,29 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul id="nav" class="navbar-nav ms-auto">
                                         <li class="nav-item">
-                                            <a href="{{ route('website.index') }}" aria-label="Toggle navigation">Inicio</a>
+                                            <a href="{{ route('website.index') }}" @if( request()->routeIs('website.index')) class="active" @endif aria-label="Toggle navigation">Inicio</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="nosotros.html" class="active" aria-label="Toggle navigation">Acerca de
+                                            <a href="{{ route('website.about-us') }}" @if( request()->routeIs('website.about-us')) class="active" @endif  aria-label="Toggle navigation">Acerca de
                                                 Nosotros</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('website.services') }}" aria-label="Toggle navigation">
+                                            <a href="{{ route('website.services') }}" @if( request()->routeIs('website.services')) class="active" @endif aria-label="Toggle navigation">
                                                 Nuestros Servicios
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('website.inspirate') }}" aria-label="Toggle navigation">
+                                            <a href="{{ route('website.inspirate') }}" @if( request()->routeIs('website.inspirate')) class="active" @endif aria-label="Toggle navigation">
                                                 Inspírate
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('website.inspirate') }}" aria-label="Toggle navigation">
+                                            <a href="{{ route('website.inspirate') }}" @if( request()->routeIs('website.inspirate')) class="active" @endif aria-label="Toggle navigation">
 
                                                 ceo </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('website.contact') }}" aria-label="Toggle navigation">Contacto</a>
+                                            <a href="{{ route('website.contact') }}" @if( request()->routeIs('website.contact')) class="active" @endif aria-label="Toggle navigation">Contacto</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -215,13 +216,15 @@
         <a href="#" class="scroll-top">
             <i class="lni lni-chevron-up"></i>
         </a>
-        <script src="{{ asset('js/jquery-3.7.1.min.js')}}"></script>
+        <!-- <script src="{{ asset('js/jquery-3.7.1.min.js')}}"></script> -->
+        <script src="{{ asset('assets/js/jquery-3.6.0.min.js')}}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
         <script src="{{ asset('assets/js/wow.min.js')}}"></script>
         <script src="{{ asset('assets/js/tiny-slider.js')}}"></script>
         <script src="{{ asset('assets/js/glightbox.min.js')}}"></script>
         <script src="{{ asset('assets/js/count-up.min.js')}}"></script>
         <script src="{{ asset('assets/js/main.js')}}"></script>
+
         <script>
             //========= testimonial
             tns({

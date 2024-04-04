@@ -143,5 +143,34 @@
 @section('scripts')
 <script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{ asset('assets/js/galeria.js')}}"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.img-popup').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            removalDelay: 300,
+            mainClass: 'mfp-fade',
+            callbacks: {
+                beforeOpen: function () {
+                    this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                    this.st.mainClass = this.st.el.attr('data-effect');
+                },
+                updateStatus: function (data) {
+                    // Verificar si data está definido y tiene la propiedad totalItems
+                    if (data && data.totalItems) {
+                        var total = data.totalItems;
+                        var current = data.index + 1;
+                        this.container.find('.mfp-counter').text(current + ' of ' + total);
+                    }
+                }
+            },
+            closeBtnInside: false, // Desactivar el botón de cierre (ya está en el HTML)
+            midClick: true
+        });
+    });
+</script>
 @endsection
 @endsection
