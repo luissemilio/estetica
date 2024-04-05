@@ -20,6 +20,7 @@ Route::controller(IndexController::class)
     Route::get('/nosotros', 'aboutUs')->name('about-us');
     Route::get('/servicios', 'services')->name('services');
     Route::get('/inspirate', 'inspirate')->name('inspirate');
+    Route::get('/ceo', 'ceo')->name('ceo');
     Route::get('/contacto', 'contact')->name('contact');
     Route::post('schedule-meeting', 'scheduleMeeting')->name('schedule-meeting');
 });
